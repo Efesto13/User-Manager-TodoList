@@ -18,7 +18,7 @@ export const login = async (user: usersDTO) => {
         const res = await fetch("/api/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email: user.email, password: user.password })
+            body: JSON.stringify({ email: user.email, password: user.password, userId: user._id })
         });
 
         if (!res.ok) throw new Error("No se encuentra la cuenta");

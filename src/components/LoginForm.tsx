@@ -15,8 +15,7 @@ export function LoginForm() {
     try {
       e.preventDefault();
 
-      await login({ email, password, role: "User" })
-
+      const data = await login({ email, password, role: "User"});
 
       await Swal.fire({
         title: "Bienvenido",
@@ -26,7 +25,7 @@ export function LoginForm() {
         showConfirmButton: false
       });
       
-
+      router.push(`/view/todolist/${data.userId}`);
 
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : "Error al registrar";

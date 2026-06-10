@@ -9,12 +9,14 @@ export interface users {
 
 export interface usersDTO{
     email: string;
-    password: string
-    role?: role
-}
+    password: string,
+    role?: role,
+    _id?: string,
+};
 
 export interface validationUser{
     email: string;
     password?: string
     role?: role
-}
+    _id: string
+};

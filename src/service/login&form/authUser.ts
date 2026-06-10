@@ -33,7 +33,8 @@ export const login = async (user: users): Promise<validationUser> => {
 
     return {
         email: validUser.email,
-        role: validUser.role
+        role: validUser.role,
+        _id: validUser._id
     };
 };
 
