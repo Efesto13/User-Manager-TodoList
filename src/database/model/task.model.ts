@@ -2,9 +2,6 @@ import { taskProps } from "@/types/task";
 import mongoose, { Schema, model } from "mongoose";
 
 const TaskSchema = new Schema<taskProps>({
-    id: {
-        type: String,
-    },
     title: {
         type: String,
         required: [true, "The tittle is required"]
@@ -19,7 +16,7 @@ const TaskSchema = new Schema<taskProps>({
     userId: {
         type: Schema.Types.ObjectId,
         ref: "users",
-        required: true
+        required: false
     }
 });
 

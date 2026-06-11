@@ -24,7 +24,7 @@ export function ConfirmAccount(email: string){
       <body>
         <div class="container">
           <div class="header">
-            <h1>¡Bienvenido!</h1>
+            <h1>¡Bienvenido a TodoList!</h1>
           </div>
           
           <div class="content">
