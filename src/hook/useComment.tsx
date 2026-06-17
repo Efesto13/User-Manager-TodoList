@@ -24,7 +24,8 @@ export const useComment = () => {
     const deleteComment = async (comment : string) => {
         try {
             const res = await deleteComments({ userId, _id, comment});
-            if(res.data) setSeeComment(res.data.comment);
+            if(res.data) setSeeComment(res.data.comments);
+            await getComment();
         } catch (error) {
             
         }
@@ -39,10 +40,7 @@ export const useComment = () => {
     useEffect(() => {
         getComment();
     }, [comment])
-
     
-
-
     const goList = () => {
         router.push(`/view/todolist/${userId}`)
     };
