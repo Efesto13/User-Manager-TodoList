@@ -17,11 +17,13 @@ export function LoginForm() {
 
       const data = await login({ email, password, role: "User"});
 
+      router.prefetch(`/view/todolist/${data.userId}`);
+
       await Swal.fire({
         title: "Bienvenido",
         text: "Inicio de sesion exitoso",
         icon: "success",
-        timer: 1500,
+        timer: 2000,
         showConfirmButton: false
       });
       

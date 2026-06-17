@@ -73,7 +73,7 @@ function TodoList() {
 
   useEffect(() => {
     fectchData()
-  }, [userId])
+  }, [])
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 flex flex-col items-center py-12 px-4">

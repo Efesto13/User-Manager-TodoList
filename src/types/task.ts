@@ -9,3 +9,9 @@ export interface taskProps {
   comments?: string[],
   userId?: Types.ObjectId,
 };
+
+export interface CommentsDTO {
+  userId: string,
+  _id: string,  
+  comment? : string
+};

@@ -38,7 +38,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ user
 
         const { userId } = await params;
 
-        const data = await Task.find({ userId: userId });
+        const data = await Task.find({ userId: userId }).lean();
 
         if (!data) NextResponse.json({ error: "Falla la obtencion de datos", data: data }, { status: 400 })
 
